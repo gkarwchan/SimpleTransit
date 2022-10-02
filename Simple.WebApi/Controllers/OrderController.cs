@@ -20,11 +20,12 @@ public class OrderController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post(string id, string customerNumber)
     {
-        var response = await _requestClient.GetResponse<ISubmitOrderSuccess>(
+        var (accepted, rejected) = await _requestClient.GetResponse<ISubmitOrderSuccess, ISubmissionOrderRejected>(
             new SubmitOrder
             {
                 OrderId = Guid.Parse(id), CustomerNumber = customerNumber, TimeStamp = DateTime.Now
             });
-        return Ok(response.Message);
+        return accepted.IsCompletedSuccessfully ? Accepted((await accepted).Message) :
+                BadRequest((await rejected));
     }
 }
