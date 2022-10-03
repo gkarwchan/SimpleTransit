@@ -1,0 +1,1 @@
+docker run -d --hostname ghassan-rabbit --name ghassan-rabbit -p 6672:5672 -p 16672:15672 rabbitmq:3-management-alpine
