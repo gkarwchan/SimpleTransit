@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Contracts", "Simple.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Consumers", "Simple.Consumers\Simple.Consumers.csproj", "{624CD9E5-CC30-4510-996C-39F83A0D8207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Service", "Simple.Service\Simple.Service.csproj", "{0497AE48-7040-4215-8A39-15C84DCA6A99}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Broker", "Simple.Broker\Simple.Broker.csproj", "{C2B6F3F9-CB11-4E3E-9121-ABE1EB39A99C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Services", "Simple.Services\Simple.Services.csproj", "{4046B814-102A-4ED7-9655-310551F8209E}"
@@ -31,10 +29,6 @@ Global
 		{624CD9E5-CC30-4510-996C-39F83A0D8207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{624CD9E5-CC30-4510-996C-39F83A0D8207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{624CD9E5-CC30-4510-996C-39F83A0D8207}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0497AE48-7040-4215-8A39-15C84DCA6A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0497AE48-7040-4215-8A39-15C84DCA6A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0497AE48-7040-4215-8A39-15C84DCA6A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0497AE48-7040-4215-8A39-15C84DCA6A99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2B6F3F9-CB11-4E3E-9121-ABE1EB39A99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2B6F3F9-CB11-4E3E-9121-ABE1EB39A99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2B6F3F9-CB11-4E3E-9121-ABE1EB39A99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
