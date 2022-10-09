@@ -15,13 +15,13 @@ namespace Simple.Broker.Consumers
             _logger = logger;
         }
 
-        public Task Consume(ConsumeContext<SubmitOrder> context)
+        public async Task Consume(ConsumeContext<SubmitOrder> context)
         {
-            context.RespondAsync(new SubmitOrderResponse
+            _logger.LogInformation("Received message ID: {Id}", context.Message.OrderId);
+            await context.RespondAsync(new SubmitOrderResponse
             {
                 OrderId = context.Message.OrderId, Status = "Success"
             });
-            return Task.CompletedTask;
         }
     }
 }

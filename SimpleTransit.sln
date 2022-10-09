@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Broker", "Simple.Bro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Services", "Simple.Services\Simple.Services.csproj", "{4046B814-102A-4ED7-9655-310551F8209E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.BareBroker", "Simple.BareBroker\Simple.BareBroker.csproj", "{912D20C1-F83B-4156-A75D-BA609E910442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +39,9 @@ Global
 		{4046B814-102A-4ED7-9655-310551F8209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4046B814-102A-4ED7-9655-310551F8209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4046B814-102A-4ED7-9655-310551F8209E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912D20C1-F83B-4156-A75D-BA609E910442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912D20C1-F83B-4156-A75D-BA609E910442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912D20C1-F83B-4156-A75D-BA609E910442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912D20C1-F83B-4156-A75D-BA609E910442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

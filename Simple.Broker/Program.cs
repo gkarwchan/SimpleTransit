@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using MassTransit;
+using Simple.Broker.Consumers;
 
 namespace Simple.Broker
 {
@@ -30,6 +31,7 @@ namespace Simple.Broker
                         var entryAssembly = Assembly.GetEntryAssembly();
 
                         x.AddConsumers(entryAssembly);
+                        // x.AddConsumer<SubmitOrderConsumer>(typeof(SubmitOrderConsumerDefinition));
                         x.AddSagaStateMachines(entryAssembly);
                         x.AddSagas(entryAssembly);
                         x.AddActivities(entryAssembly);
