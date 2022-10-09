@@ -5,9 +5,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using MassTransit;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace Simple.Worker
+namespace Simple.Broker
 {
     public class Program
     {
@@ -34,6 +33,7 @@ namespace Simple.Worker
                         x.AddSagaStateMachines(entryAssembly);
                         x.AddSagas(entryAssembly);
                         x.AddActivities(entryAssembly);
+                        
                         x.UsingRabbitMq((cxt, cfg) =>
                         {
                             cfg.Host("amqp://localhost:6672", h =>
@@ -43,9 +43,7 @@ namespace Simple.Worker
                             });
                             cfg.ConfigureEndpoints(cxt);
                         });
-
                     });
-                    services.AddHostedService<Worker>();
                 });
     }
 }

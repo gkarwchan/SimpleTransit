@@ -1,7 +1,8 @@
 using MassTransit;
-using Simple.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
 
 builder.Services.AddMassTransit(x =>
 {
@@ -14,9 +15,14 @@ builder.Services.AddMassTransit(x =>
         });
         cfg.ConfigureEndpoints(cxt);
     });
-
 });
-builder.Services.AddCors();
+builder.Services.AddOptions<MassTransitHostOptions>()
+    .Configure(opt =>
+    {
+        opt.WaitUntilStarted = true;
+        opt.StartTimeout = TimeSpan.FromSeconds(10);
+        opt.StopTimeout = TimeSpan.FromSeconds(30);
+    });
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -34,7 +40,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.UseCors();
+
 app.MapControllers();
 
 app.Run();
